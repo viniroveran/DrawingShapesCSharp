@@ -152,12 +152,14 @@ namespace Shapes
         {
             if (this.radioButtonCircle.Checked == true)
             {
+                this.label1.Text = "Radius";
                 this.textBoxX.Enabled = true;
                 this.textBoxY.Enabled = true;
                 this.textBoxWidth.Enabled = true;
             }
             else
             {
+                this.label1.Text = "Width";
                 this.textBoxX.Enabled = false;
                 this.textBoxY.Enabled = false;
                 this.textBoxWidth.Enabled = false;
