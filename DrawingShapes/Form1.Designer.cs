@@ -30,8 +30,8 @@
         {
             this.textBoxHeight = new System.Windows.Forms.TextBox();
             this.textBoxWidth = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelWidth = new System.Windows.Forms.Label();
+            this.labelHeight = new System.Windows.Forms.Label();
             this.textBoxDisplay = new System.Windows.Forms.TextBox();
             this.radioButtonRectangle = new System.Windows.Forms.RadioButton();
             this.buttonDraw = new System.Windows.Forms.Button();
@@ -78,23 +78,23 @@
             this.textBoxWidth.TabIndex = 1;
             this.textBoxWidth.Text = "5";
             // 
-            // label1
+            // labelWidth
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(380, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Width";
+            this.labelWidth.AutoSize = true;
+            this.labelWidth.Location = new System.Drawing.Point(374, 48);
+            this.labelWidth.Name = "labelWidth";
+            this.labelWidth.Size = new System.Drawing.Size(35, 13);
+            this.labelWidth.TabIndex = 4;
+            this.labelWidth.Text = "Width";
             // 
-            // label2
+            // labelHeight
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(377, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Height";
+            this.labelHeight.AutoSize = true;
+            this.labelHeight.Location = new System.Drawing.Point(374, 22);
+            this.labelHeight.Name = "labelHeight";
+            this.labelHeight.Size = new System.Drawing.Size(38, 13);
+            this.labelHeight.TabIndex = 5;
+            this.labelHeight.Text = "Height";
             // 
             // textBoxDisplay
             // 
@@ -165,6 +165,7 @@
             this.radioButtonEllipse.TabStop = true;
             this.radioButtonEllipse.Text = "Elipse";
             this.radioButtonEllipse.UseVisualStyleBackColor = true;
+            this.radioButtonEllipse.CheckedChanged += new System.EventHandler(this.radioButtonEllipse_CheckedChanged);
             // 
             // radioButtonCircle
             // 
@@ -398,8 +399,8 @@
             this.Controls.Add(this.panelDrawing);
             this.Controls.Add(this.buttonDraw);
             this.Controls.Add(this.textBoxDisplay);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelHeight);
+            this.Controls.Add(this.labelWidth);
             this.Controls.Add(this.textBoxWidth);
             this.Controls.Add(this.textBoxHeight);
             this.Name = "Form1";
@@ -418,8 +419,8 @@
 
         private System.Windows.Forms.TextBox textBoxHeight;
         private System.Windows.Forms.TextBox textBoxWidth;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelWidth;
+        private System.Windows.Forms.Label labelHeight;
         private System.Windows.Forms.TextBox textBoxDisplay;
         private System.Windows.Forms.RadioButton radioButtonRectangle;
         private System.Windows.Forms.Button buttonDraw;

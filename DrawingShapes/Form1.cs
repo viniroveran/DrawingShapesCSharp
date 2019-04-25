@@ -130,12 +130,16 @@ namespace Shapes
         {
             if (this.radioButtonSquare.Checked == true)
             {
+                this.labelHeight.Text = "";
+                this.labelWidth.Text = "Side";
                 this.textBoxX.Enabled = true;
                 this.textBoxY.Enabled = true;
                 this.textBoxWidth.Enabled = true;
             }
             else
             {
+                this.labelHeight.Text = "Height";
+                this.labelWidth.Text = "Width";
                 this.textBoxX.Enabled = false;
                 this.textBoxY.Enabled = false;
                 this.textBoxWidth.Enabled = false;
@@ -152,16 +156,40 @@ namespace Shapes
         {
             if (this.radioButtonCircle.Checked == true)
             {
-                this.label1.Text = "Radius";
+                this.labelHeight.Text = "";
+                this.labelWidth.Text = "Radius";
                 this.textBoxX.Enabled = true;
                 this.textBoxY.Enabled = true;
                 this.textBoxWidth.Enabled = true;
             }
             else
             {
-                this.label1.Text = "Width";
+                this.labelHeight.Text = "Height";
+                this.labelWidth.Text = "Width";
                 this.textBoxX.Enabled = false;
                 this.textBoxY.Enabled = false;
+                this.textBoxWidth.Enabled = false;
+            }
+        }
+
+        private void radioButtonEllipse_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.radioButtonEllipse.Checked == true)
+            {
+                this.labelHeight.Text = "Radius1";
+                this.labelWidth.Text = "Radius2";
+                this.textBoxX.Enabled = true;
+                this.textBoxY.Enabled = true;
+                this.textBoxHeight.Enabled = true;
+                this.textBoxWidth.Enabled = true;
+            }
+            else
+            {
+                this.labelHeight.Text = "Height";
+                this.labelWidth.Text = "Width";
+                this.textBoxX.Enabled = false;
+                this.textBoxY.Enabled = false;
+                this.textBoxHeight.Enabled = false;
                 this.textBoxWidth.Enabled = false;
             }
         }
