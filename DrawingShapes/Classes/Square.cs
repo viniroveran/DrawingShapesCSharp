@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace Shapes
 {
-    public class Square : Point
+    public class Square : Shape
     {
         private int width;
         public int Width { get => width; set => width = value; }

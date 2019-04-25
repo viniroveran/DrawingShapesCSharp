@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace Shapes
 {
-    public class Rectangle : Point
+    public class Rectangle : Shape
     {
         private int height;
         private int width;

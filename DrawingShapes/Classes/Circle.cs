@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace Shapes
 {
-    public class Circle : Point
+    public class Circle : Shape
     {
         private int radius;
 
