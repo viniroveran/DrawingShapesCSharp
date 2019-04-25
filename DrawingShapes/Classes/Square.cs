@@ -53,11 +53,10 @@ namespace Shapes
         }
         public override void Fill(PaintEventArgs e)
         {
-            Brush myBrush = new SolidBrush(Color.Red);
+            Brush myBrush = new SolidBrush(Color.DarkBlue);
             e.Graphics.FillRectangle(myBrush, new System.Drawing.Rectangle(this.X, this.Y, this.width, this.width));
 
             myBrush.Dispose();
-            e.Graphics.Dispose();
         }
     }
 }

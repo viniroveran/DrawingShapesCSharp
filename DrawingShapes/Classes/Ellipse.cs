@@ -55,7 +55,7 @@ namespace Shapes
         }
         public override void Draw(PaintEventArgs e)
         {
-            Pen myPen = new Pen(Color.Green, 2);
+            Pen myPen = new Pen(Color.LightGreen, 2);
 
             e.Graphics.DrawEllipse(myPen, new System.Drawing.Rectangle(this.X, this.Y, this.radius_1, this.radius_2));
 
@@ -64,11 +64,10 @@ namespace Shapes
         }
         public override void Fill(PaintEventArgs e)
         {
-            Brush myBrush = new SolidBrush(Color.Green);
+            Brush myBrush = new SolidBrush(Color.DarkGreen);
             e.Graphics.FillEllipse(myBrush, new System.Drawing.Rectangle(this.X, this.Y, this.radius_1, this.radius_2));
 
             myBrush.Dispose();
-            e.Graphics.Dispose();
         }
     }
 }

@@ -16,6 +16,7 @@ namespace Shapes
         Square mySquare;
         Circle myCircle;
         Ellipse myEllipse;
+        bool fill;
 
         public Form1()
         {
@@ -65,6 +66,9 @@ namespace Shapes
                 int x = Convert.ToInt32(this.textBoxX.Text);
                 int y = Convert.ToInt32(this.textBoxY.Text);
                 myRectangle = new Rectangle(x, y, height, width);
+
+                // fill or draw?
+                fill = false;
               
                 //txt_Display
                 String info = myRectangle.ToString();
@@ -79,6 +83,9 @@ namespace Shapes
                 int y = Convert.ToInt32(this.textBoxY.Text);
                 mySquare = new Square(x, y, width);
 
+                // fill or draw?
+                fill = false;
+
                 //txt_Display
                 String info = mySquare.ToString();
                 this.textBoxDisplay.Text = info;
@@ -91,6 +98,9 @@ namespace Shapes
                 int x = Convert.ToInt32(this.textBoxX.Text);
                 int y = Convert.ToInt32(this.textBoxY.Text);
                 myCircle = new Circle(x, y, width);
+
+                // fill or draw?
+                fill = false;
 
                 //txt_Display
                 String info = myCircle.ToString();
@@ -106,6 +116,9 @@ namespace Shapes
                 int y = Convert.ToInt32(this.textBoxY.Text);
                 myEllipse = new Ellipse(x, y, height, width);
 
+                // fill or draw?
+                fill = false;
+
                 //txt_Display
                 String info = myEllipse.ToString();
                 this.textBoxDisplay.Text = info;
@@ -118,10 +131,13 @@ namespace Shapes
         }
         //the class PaintEventArgs provides data for the object event Paint 
         private void panelDrawing_Paint(object sender, PaintEventArgs e)
-        {     
+        {
+            // Fill before painting to have a lighter border
             // Rectangle
             if (this.radioButtonRectangle.Checked == true && myRectangle != null)
             {
+                if (fill)
+                    myRectangle.Fill(e);
                 myRectangle.Draw(e);
 
                 this.textBoxDisplay.Text = myRectangle.ToString();
@@ -129,6 +145,8 @@ namespace Shapes
             // Square
             if (this.radioButtonSquare.Checked == true && mySquare != null)
             {
+                if (fill)
+                    mySquare.Fill(e);
                 mySquare.Draw(e);
 
                 this.textBoxDisplay.Text = mySquare.ToString();
@@ -136,6 +154,8 @@ namespace Shapes
             // Circle
             if (this.radioButtonCircle.Checked == true && myCircle != null)
             {
+                if (fill)
+                    myCircle.Fill(e);
                 myCircle.Draw(e);
 
                 this.textBoxDisplay.Text = myCircle.ToString();
@@ -143,6 +163,8 @@ namespace Shapes
             // Ellipse
             if (this.radioButtonEllipse.Checked == true && myEllipse != null)
             {
+                if (fill)
+                    myEllipse.Fill(e);
                 myEllipse.Draw(e);
 
                 this.textBoxDisplay.Text = myEllipse.ToString();
@@ -215,6 +237,80 @@ namespace Shapes
                 this.textBoxHeight.Enabled = false;
                 this.textBoxWidth.Enabled = false;
             }
+        }
+
+        private void buttonFill_Click(object sender, EventArgs e)
+        {
+            // Rectangle
+            if (this.radioButtonRectangle.Checked == true)
+            {
+                int width = Convert.ToInt32(this.textBoxWidth.Text);
+                int height = Convert.ToInt32(this.textBoxHeight.Text);
+                int x = Convert.ToInt32(this.textBoxX.Text);
+                int y = Convert.ToInt32(this.textBoxY.Text);
+                myRectangle = new Rectangle(x, y, height, width);
+
+                // fill or draw?
+                fill = true;
+
+                //txt_Display
+                String info = myRectangle.ToString();
+                this.textBoxDisplay.Text = info;
+                this.textBoxDisplay.Visible = true;
+            }
+            // Square
+            if (this.radioButtonSquare.Checked == true)
+            {
+                int width = Convert.ToInt32(this.textBoxWidth.Text);
+                int x = Convert.ToInt32(this.textBoxX.Text);
+                int y = Convert.ToInt32(this.textBoxY.Text);
+                mySquare = new Square(x, y, width);
+
+                // fill or draw?
+                fill = true;
+
+                //txt_Display
+                String info = mySquare.ToString();
+                this.textBoxDisplay.Text = info;
+                this.textBoxDisplay.Visible = true;
+            }
+            // Circle
+            if (this.radioButtonCircle.Checked == true)
+            {
+                int width = Convert.ToInt32(this.textBoxWidth.Text);
+                int x = Convert.ToInt32(this.textBoxX.Text);
+                int y = Convert.ToInt32(this.textBoxY.Text);
+                myCircle = new Circle(x, y, width);
+
+                // fill or draw?
+                fill = true;
+
+                //txt_Display
+                String info = myCircle.ToString();
+                this.textBoxDisplay.Text = info;
+                this.textBoxDisplay.Visible = true;
+            }
+            // Ellipse
+            if (this.radioButtonEllipse.Checked == true)
+            {
+                int width = Convert.ToInt32(this.textBoxWidth.Text);
+                int height = Convert.ToInt32(this.textBoxHeight.Text);
+                int x = Convert.ToInt32(this.textBoxX.Text);
+                int y = Convert.ToInt32(this.textBoxY.Text);
+                myEllipse = new Ellipse(x, y, height, width);
+
+                // fill or draw?
+                fill = true;
+
+                //txt_Display
+                String info = myEllipse.ToString();
+                this.textBoxDisplay.Text = info;
+                this.textBoxDisplay.Visible = true;
+            }
+
+            this.panelDrawing.Invalidate(); // it causes the control to be redrawn
+            this.panelDrawing.Update();
+            this.Refresh();
         }
     }
 }

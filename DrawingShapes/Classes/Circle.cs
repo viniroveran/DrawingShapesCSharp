@@ -49,7 +49,7 @@ namespace Shapes
         }
         public override void Draw(PaintEventArgs e)
         {
-            Pen myPen = new Pen(Color.Yellow, 2);
+            Pen myPen = new Pen(Color.Orange, 2);
 
             e.Graphics.DrawEllipse(myPen, new System.Drawing.Rectangle(this.X, this.Y, this.radius, this.radius));
 

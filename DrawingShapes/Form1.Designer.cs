@@ -58,6 +58,7 @@
             this.buttonMoveRight = new System.Windows.Forms.Button();
             this.buttonMoveLeft = new System.Windows.Forms.Button();
             this.buttonMoveUp = new System.Windows.Forms.Button();
+            this.buttonFill = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -121,12 +122,12 @@
             // 
             // buttonDraw
             // 
-            this.buttonDraw.Location = new System.Drawing.Point(334, 262);
+            this.buttonDraw.Location = new System.Drawing.Point(396, 253);
             this.buttonDraw.Margin = new System.Windows.Forms.Padding(1);
             this.buttonDraw.Name = "buttonDraw";
-            this.buttonDraw.Size = new System.Drawing.Size(133, 20);
+            this.buttonDraw.Size = new System.Drawing.Size(54, 33);
             this.buttonDraw.TabIndex = 14;
-            this.buttonDraw.Text = "Draw It";
+            this.buttonDraw.Text = "Draw";
             this.buttonDraw.UseVisualStyleBackColor = true;
             this.buttonDraw.Click += new System.EventHandler(this.Draw_Click);
             // 
@@ -392,11 +393,23 @@
             this.buttonMoveUp.UseVisualStyleBackColor = true;
             this.buttonMoveUp.Click += new System.EventHandler(this.buttonMoveUp_Click);
             // 
+            // buttonFill
+            // 
+            this.buttonFill.Location = new System.Drawing.Point(315, 253);
+            this.buttonFill.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonFill.Name = "buttonFill";
+            this.buttonFill.Size = new System.Drawing.Size(54, 33);
+            this.buttonFill.TabIndex = 40;
+            this.buttonFill.Text = "Fill";
+            this.buttonFill.UseVisualStyleBackColor = true;
+            this.buttonFill.Click += new System.EventHandler(this.buttonFill_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 292);
+            this.Controls.Add(this.buttonFill);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.buttonMoveDownRight);
             this.Controls.Add(this.buttonMoveDownLeft);
@@ -465,6 +478,7 @@
         private System.Windows.Forms.Button buttonMoveDownLeft;
         private System.Windows.Forms.Button buttonMoveDownRight;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonFill;
     }
 }
 
