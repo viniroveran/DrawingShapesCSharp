@@ -10,33 +10,35 @@ namespace Shapes
 {
     public class Ellipse : Shape
     {
-        private int height;
-        private int width;
+        private int radius_1;
+        private int radius_2;
 
-        public int Height { get => height; set => height = value; }
-        public int Width { get => width; set => width = value; }
+        public int Radius_1 { get => radius_1; set => radius_1 = value; }
+        public int Radius_2 { get => radius_2; set => radius_2 = value; }
 
-        public Ellipse(int x, int y, int height, int width) : base(x, y)
+        public Ellipse(int x, int y, int radius_1, int radius_2) : base(x, y)
         {
-            this.height = height;
-            this.width = width;
+            this.radius_1 = radius_1;
+            this.radius_2 = radius_2;
         }
-        public Ellipse(int height, int width) : base()
+        public Ellipse(int radius_1, int radius_2) : base()
         {
-            this.height = height;
-            this.width = width;
+            this.radius_1 = radius_1;
+            this.radius_2 = radius_2;
         }
         public Ellipse() : base()
         {
-            this.height = 1;
-            this.width = 1;
+            this.radius_1 = 1;
+            this.radius_2 = 3;
         }
         public override double CalculateArea() {
-            return this.width * this.width;
+            double pi = Math.PI;
+            return pi * (radius_1 * radius_2);
         }
 
         public override double CalculatePerimeter() {
-            return 2 * (this.width + this.width);
+            double pi = Math.PI;
+            return 2 * pi * Math.Sqrt(((radius_1 * radius_1) + (radius_2 * radius_2))/2);
         }
 
         public override  String ToString()
@@ -44,7 +46,8 @@ namespace Shapes
             double perimeter = this.CalculatePerimeter();
             double area = this.CalculateArea();
             // \r means carriage return
-            String description = "Width = "+ this.width + "\r\n"; 
+            String description = "Radius 1 = "+ this.radius_1 + "\r\n"; 
+            description += "Radius 2 = "+ this.radius_2 + "\r\n"; 
             description += "Perimeter = " + Math.Round(perimeter)+ "\r\n";
             description += "Area = " + Math.Round(area) + "\r\n";
 
@@ -54,7 +57,7 @@ namespace Shapes
         {
             Pen myPen = new Pen(Color.Green, 2);
 
-            e.Graphics.DrawEllipse(myPen, new System.Drawing.Rectangle(this.X, this.Y, this.height, this.width));
+            e.Graphics.DrawEllipse(myPen, new System.Drawing.Rectangle(this.X, this.Y, this.radius_1, this.radius_2));
 
             myPen.Dispose();
             e.Graphics.Dispose();
@@ -62,7 +65,7 @@ namespace Shapes
         public override void Fill(PaintEventArgs e)
         {
             Brush myBrush = new SolidBrush(Color.Green);
-            e.Graphics.FillEllipse(myBrush, new System.Drawing.Rectangle(this.X, this.Y, this.width, this.height));
+            e.Graphics.FillEllipse(myBrush, new System.Drawing.Rectangle(this.X, this.Y, this.radius_1, this.radius_2));
 
             myBrush.Dispose();
             e.Graphics.Dispose();

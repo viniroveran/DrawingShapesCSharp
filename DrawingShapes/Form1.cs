@@ -84,6 +84,7 @@ namespace Shapes
                 this.textBoxDisplay.Text = info;
                 this.textBoxDisplay.Visible = true;
             }
+            // Circle
             if (this.radioButtonCircle.Checked == true)
             {
                 int width = Convert.ToInt32(this.textBoxWidth.Text);
@@ -96,33 +97,55 @@ namespace Shapes
                 this.textBoxDisplay.Text = info;
                 this.textBoxDisplay.Visible = true;
             }
-            //
+            // Ellipse
+            if (this.radioButtonEllipse.Checked == true)
+            {
+                int width = Convert.ToInt32(this.textBoxWidth.Text);
+                int height = Convert.ToInt32(this.textBoxHeight.Text);
+                int x = Convert.ToInt32(this.textBoxX.Text);
+                int y = Convert.ToInt32(this.textBoxY.Text);
+                myEllipse = new Ellipse(x, y, height, width);
+
+                //txt_Display
+                String info = myEllipse.ToString();
+                this.textBoxDisplay.Text = info;
+                this.textBoxDisplay.Visible = true;
+            }
+
             this.panelDrawing.Invalidate(); // it causes the control to be redrawn
             this.panelDrawing.Update();
             this.Refresh();                                                      
         }
         //the class PaintEventArgs provides data for the object event Paint 
         private void panelDrawing_Paint(object sender, PaintEventArgs e)
-        {           
+        {     
+            // Rectangle
             if (this.radioButtonRectangle.Checked == true && myRectangle != null)
             {
                 myRectangle.Draw(e);
 
                 this.textBoxDisplay.Text = myRectangle.ToString();
             }
-
+            // Square
             if (this.radioButtonSquare.Checked == true && mySquare != null)
             {
                 mySquare.Draw(e);
 
                 this.textBoxDisplay.Text = mySquare.ToString();
             }
-
+            // Circle
             if (this.radioButtonCircle.Checked == true && myCircle != null)
             {
                 myCircle.Draw(e);
 
                 this.textBoxDisplay.Text = myCircle.ToString();
+            }
+            // Ellipse
+            if (this.radioButtonEllipse.Checked == true && myEllipse != null)
+            {
+                myEllipse.Draw(e);
+
+                this.textBoxDisplay.Text = myEllipse.ToString();
             }
         }
 
