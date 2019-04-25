@@ -8,30 +8,32 @@ using System.Drawing;
 
 namespace Shapes
 {
-    public class Circle
+    public class Circle : Point
     {
-        private int width;
-        private int dx;
-        private int dy;
+        private int radius;
 
-        public int Width { get => width; set => width = value; }
-        public int Dx { get => dx; set => dx = value; }
-        public int Dy { get => dy; set => dy = value; }
+        public int Radius { get => radius; set => radius = value; }
 
-        public Circle(int width)
+        public Circle(int x, int y, int radius) : base(x, y)
         {
-            this.width = width;
+            this.radius = radius;
+        }
+        public Circle(int radius)
+        {
+            this.radius = radius;
         }
         public Circle()
         {
-            this.width = 1;
+            this.radius = 1;
         }
-        public double CalculateArea() {
-            return this.width * this.width;
+        public override double CalculateArea() {
+            double pi = Math.PI;
+            return pi * (radius * radius);
         }
 
-        public double CalculatePerimeter() {
-            return 2 * (this.width + this.width);
+        public override double CalculatePerimeter() {
+            double pi = Math.PI;
+            return 2 * (pi * radius);
         }
 
         public override  String ToString()
@@ -39,58 +41,27 @@ namespace Shapes
             double perimeter = this.CalculatePerimeter();
             double area = this.CalculateArea();
             // \r means carriage return
-            String description = "Width = "+ this.width + "\r\n"; 
+            String description = "Radius = "+ this.radius + "\r\n"; 
             description += "Perimeter = " + Math.Round(perimeter)+ "\r\n";
             description += "Area = " + Math.Round(area) + "\r\n";
 
             return description;
         }
-        public void Draw(PaintEventArgs e)
+        public override void Draw(PaintEventArgs e)
         {
-            Pen myPen = new Pen(Color.Blue, 2);
-            /* The point of the LeftTop panel is fixed to:
-            *              LeftTopPoint(xPosition, yPosition) = LeftTopPoint(0,0)
-            * but, you can change these values in the code, for example:
-            *              LeftTopPont(xPosition, yPosition) = LeftTopPont(10,10)
-            *  Or:
-            *  you can derive the class Rectangle from the class Shape  
-            *  and use the xCoordinate and yCoordinate          
-            * *****************/
-           
-            e.Graphics.DrawRectangle(myPen, new System.Drawing.Rectangle(0, 0, this.width, this.width));
+            Pen myPen = new Pen(Color.Yellow, 2);
+
+            e.Graphics.DrawEllipse(myPen, new System.Drawing.Rectangle(this.X, this.Y, this.radius, this.radius));
 
             myPen.Dispose();
             e.Graphics.Dispose();
         }
-
-        public void MoveRight(PaintEventArgs e)
+        public override void Fill(PaintEventArgs e)
         {
-            Pen myPen = new Pen(Color.Blue, 2);
+            Brush myBrush = new SolidBrush(Color.DarkOrange);
+            e.Graphics.FillEllipse(myBrush, new System.Drawing.Rectangle(this.X, this.Y, this.radius, this.radius));
 
-            e.Graphics.DrawRectangle(myPen, new System.Drawing.Rectangle(this.dx, 0, this.width, this.width));
-
-            myPen.Dispose();
-            e.Graphics.Dispose();
-        }
-
-        public void MoveDown(PaintEventArgs e)
-        {
-            Pen myPen = new Pen(Color.Blue, 2);
-
-            e.Graphics.DrawRectangle(myPen, new System.Drawing.Rectangle(0, this.dy, this.width, this.width));
-
-            myPen.Dispose();
-            e.Graphics.Dispose();
-        }
-
-        public void MoveUpRight(PaintEventArgs e)
-        {
-            Pen myPen = new Pen(Color.Blue, 2);
-
-            e.Graphics.DrawRectangle(myPen, new System.Drawing.Rectangle(this.dx, this.dy, this.width, this.width));
-
-            myPen.Dispose();
-            e.Graphics.Dispose();
+            myBrush.Dispose();
         }
     }
 }

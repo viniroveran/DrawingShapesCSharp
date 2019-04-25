@@ -37,10 +37,10 @@
             this.buttonDraw = new System.Windows.Forms.Button();
             this.panelDrawing = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonCircle = new System.Windows.Forms.RadioButton();
             this.radioButtonSquare = new System.Windows.Forms.RadioButton();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -68,6 +68,7 @@
             this.textBoxHeight.Name = "textBoxHeight";
             this.textBoxHeight.Size = new System.Drawing.Size(46, 20);
             this.textBoxHeight.TabIndex = 0;
+            this.textBoxHeight.Text = "5";
             // 
             // textBoxWidth
             // 
@@ -75,6 +76,7 @@
             this.textBoxWidth.Name = "textBoxWidth";
             this.textBoxWidth.Size = new System.Drawing.Size(46, 20);
             this.textBoxWidth.TabIndex = 1;
+            this.textBoxWidth.Text = "5";
             // 
             // label1
             // 
@@ -140,7 +142,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButtonCircle);
             this.groupBox1.Controls.Add(this.radioButtonSquare);
             this.groupBox1.Controls.Add(this.radioButtonRectangle);
             this.groupBox1.Location = new System.Drawing.Point(25, 6);
@@ -151,6 +153,31 @@
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select a shape";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(88, 35);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(1);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(53, 17);
+            this.radioButton2.TabIndex = 16;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Elipse";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonCircle
+            // 
+            this.radioButtonCircle.AutoSize = true;
+            this.radioButtonCircle.Location = new System.Drawing.Point(12, 35);
+            this.radioButtonCircle.Margin = new System.Windows.Forms.Padding(1);
+            this.radioButtonCircle.Name = "radioButtonCircle";
+            this.radioButtonCircle.Size = new System.Drawing.Size(51, 17);
+            this.radioButtonCircle.TabIndex = 15;
+            this.radioButtonCircle.TabStop = true;
+            this.radioButtonCircle.Text = "Circle";
+            this.radioButtonCircle.UseVisualStyleBackColor = true;
+            this.radioButtonCircle.CheckedChanged += new System.EventHandler(this.radioButtonCircle_CheckedChanged);
             // 
             // radioButtonSquare
             // 
@@ -186,30 +213,6 @@
             0,
             0,
             0});
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 35);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(1);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(51, 17);
-            this.radioButton1.TabIndex = 15;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Circle";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(88, 35);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(1);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(53, 17);
-            this.radioButton2.TabIndex = 16;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Elipse";
-            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // numericUpDown2
             // 
@@ -425,7 +428,7 @@
         private System.Windows.Forms.RadioButton radioButtonSquare;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonCircle;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;

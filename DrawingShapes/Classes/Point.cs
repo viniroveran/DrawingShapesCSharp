@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace Shapes
 {
-    public abstract class Point : IShapes
+    public abstract class Point : IShapes2D
     {
         private int x;
         private int y;

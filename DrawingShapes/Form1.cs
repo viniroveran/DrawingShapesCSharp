@@ -7,9 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//references
-//https://www.c-sharpcorner.com/article/gdi-tutorial-for-beginners/
-//https://msdn.microsoft.com/en-us/library/system.drawing.rectangle(v=vs.110).aspx
 
 namespace Shapes
 {
@@ -17,6 +14,8 @@ namespace Shapes
     {
         Rectangle myRectangle;
         Square mySquare;
+        Circle myCircle;
+        Ellipse myEllipse;
 
         public Form1()
         {
@@ -26,6 +25,8 @@ namespace Shapes
         private void Form1_Load(object sender, EventArgs e)
         {
             reset();
+            this.textBoxX.Enabled = false;
+            this.textBoxY.Enabled = false;
             this.textBoxHeight.Enabled = false;
             this.textBoxWidth.Enabled = false;
         }
@@ -83,6 +84,18 @@ namespace Shapes
                 this.textBoxDisplay.Text = info;
                 this.textBoxDisplay.Visible = true;
             }
+            if (this.radioButtonCircle.Checked == true)
+            {
+                int width = Convert.ToInt32(this.textBoxWidth.Text);
+                int x = Convert.ToInt32(this.textBoxX.Text);
+                int y = Convert.ToInt32(this.textBoxY.Text);
+                myCircle = new Circle(x, y, width);
+
+                //txt_Display
+                String info = myCircle.ToString();
+                this.textBoxDisplay.Text = info;
+                this.textBoxDisplay.Visible = true;
+            }
             //
             this.panelDrawing.Invalidate(); // it causes the control to be redrawn
             this.panelDrawing.Update();
@@ -103,6 +116,13 @@ namespace Shapes
                 mySquare.Draw(e);
 
                 this.textBoxDisplay.Text = mySquare.ToString();
+            }
+
+            if (this.radioButtonCircle.Checked == true && myCircle != null)
+            {
+                myCircle.Draw(e);
+
+                this.textBoxDisplay.Text = myCircle.ToString();
             }
         }
 
@@ -126,6 +146,29 @@ namespace Shapes
         {
 
 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonCircle_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.radioButtonCircle.Checked == true)
+            {
+                this.label1.Text = "Radius";
+                this.textBoxX.Enabled = true;
+                this.textBoxY.Enabled = true;
+                this.textBoxWidth.Enabled = true;
+            }
+            else
+            {
+                this.label1.Text = "Width";
+                this.textBoxX.Enabled = false;
+                this.textBoxY.Enabled = false;
+                this.textBoxWidth.Enabled = false;
+            }
         }
     }
 }
