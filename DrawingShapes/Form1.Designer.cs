@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBoxHeight = new System.Windows.Forms.TextBox();
             this.textBoxWidth = new System.Windows.Forms.TextBox();
             this.labelWidth = new System.Windows.Forms.Label();
@@ -48,15 +49,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxY = new System.Windows.Forms.TextBox();
             this.textBoxX = new System.Windows.Forms.TextBox();
-            this.buttonMoveUp = new System.Windows.Forms.Button();
-            this.buttonMoveLeft = new System.Windows.Forms.Button();
-            this.buttonMoveRight = new System.Windows.Forms.Button();
-            this.buttonMoveDown = new System.Windows.Forms.Button();
-            this.buttonMoveUpLeft = new System.Windows.Forms.Button();
-            this.buttonMoveUpRight = new System.Windows.Forms.Button();
-            this.buttonMoveDownLeft = new System.Windows.Forms.Button();
-            this.buttonMoveDownRight = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.buttonMoveDownRight = new System.Windows.Forms.Button();
+            this.buttonMoveDownLeft = new System.Windows.Forms.Button();
+            this.buttonMoveUpRight = new System.Windows.Forms.Button();
+            this.buttonMoveUpLeft = new System.Windows.Forms.Button();
+            this.buttonMoveDown = new System.Windows.Forms.Button();
+            this.buttonMoveRight = new System.Windows.Forms.Button();
+            this.buttonMoveLeft = new System.Windows.Forms.Button();
+            this.buttonMoveUp = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -289,89 +290,107 @@
             this.textBoxX.TabIndex = 26;
             this.textBoxX.Text = "0";
             // 
-            // buttonMoveUp
-            // 
-            this.buttonMoveUp.Location = new System.Drawing.Point(585, 109);
-            this.buttonMoveUp.Name = "buttonMoveUp";
-            this.buttonMoveUp.Size = new System.Drawing.Size(84, 23);
-            this.buttonMoveUp.TabIndex = 30;
-            this.buttonMoveUp.Text = "Move Up";
-            this.buttonMoveUp.UseVisualStyleBackColor = true;
-            this.buttonMoveUp.Click += new System.EventHandler(this.buttonMoveUp_Click);
-            // 
-            // buttonMoveLeft
-            // 
-            this.buttonMoveLeft.Location = new System.Drawing.Point(504, 160);
-            this.buttonMoveLeft.Name = "buttonMoveLeft";
-            this.buttonMoveLeft.Size = new System.Drawing.Size(75, 23);
-            this.buttonMoveLeft.TabIndex = 32;
-            this.buttonMoveLeft.Text = "Move Left";
-            this.buttonMoveLeft.UseVisualStyleBackColor = true;
-            // 
-            // buttonMoveRight
-            // 
-            this.buttonMoveRight.Location = new System.Drawing.Point(675, 160);
-            this.buttonMoveRight.Name = "buttonMoveRight";
-            this.buttonMoveRight.Size = new System.Drawing.Size(75, 23);
-            this.buttonMoveRight.TabIndex = 33;
-            this.buttonMoveRight.Text = "Move Right";
-            this.buttonMoveRight.UseVisualStyleBackColor = true;
-            // 
-            // buttonMoveDown
-            // 
-            this.buttonMoveDown.Location = new System.Drawing.Point(585, 210);
-            this.buttonMoveDown.Name = "buttonMoveDown";
-            this.buttonMoveDown.Size = new System.Drawing.Size(84, 23);
-            this.buttonMoveDown.TabIndex = 34;
-            this.buttonMoveDown.Text = "Move Down";
-            this.buttonMoveDown.UseVisualStyleBackColor = true;
-            // 
-            // buttonMoveUpLeft
-            // 
-            this.buttonMoveUpLeft.Location = new System.Drawing.Point(504, 109);
-            this.buttonMoveUpLeft.Name = "buttonMoveUpLeft";
-            this.buttonMoveUpLeft.Size = new System.Drawing.Size(75, 45);
-            this.buttonMoveUpLeft.TabIndex = 35;
-            this.buttonMoveUpLeft.Text = "Move Up Left";
-            this.buttonMoveUpLeft.UseVisualStyleBackColor = true;
-            // 
-            // buttonMoveUpRight
-            // 
-            this.buttonMoveUpRight.Location = new System.Drawing.Point(675, 109);
-            this.buttonMoveUpRight.Name = "buttonMoveUpRight";
-            this.buttonMoveUpRight.Size = new System.Drawing.Size(75, 45);
-            this.buttonMoveUpRight.TabIndex = 36;
-            this.buttonMoveUpRight.Text = "Move Up Right";
-            this.buttonMoveUpRight.UseVisualStyleBackColor = true;
-            // 
-            // buttonMoveDownLeft
-            // 
-            this.buttonMoveDownLeft.Location = new System.Drawing.Point(504, 189);
-            this.buttonMoveDownLeft.Name = "buttonMoveDownLeft";
-            this.buttonMoveDownLeft.Size = new System.Drawing.Size(75, 45);
-            this.buttonMoveDownLeft.TabIndex = 37;
-            this.buttonMoveDownLeft.Text = "Move Down Left";
-            this.buttonMoveDownLeft.UseVisualStyleBackColor = true;
-            // 
-            // buttonMoveDownRight
-            // 
-            this.buttonMoveDownRight.Location = new System.Drawing.Point(675, 189);
-            this.buttonMoveDownRight.Name = "buttonMoveDownRight";
-            this.buttonMoveDownRight.Size = new System.Drawing.Size(75, 45);
-            this.buttonMoveDownRight.TabIndex = 38;
-            this.buttonMoveDownRight.Text = "Move Down Right";
-            this.buttonMoveDownRight.UseVisualStyleBackColor = true;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(544, 70);
+            this.label7.Location = new System.Drawing.Point(549, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(173, 24);
             this.label7.TabIndex = 39;
             this.label7.Text = "Move your Drawing";
+            // 
+            // buttonMoveDownRight
+            // 
+            this.buttonMoveDownRight.BackgroundImage = global::DrawingShapes.Properties.Resources.arrow_down_right;
+            this.buttonMoveDownRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonMoveDownRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonMoveDownRight.Location = new System.Drawing.Point(675, 203);
+            this.buttonMoveDownRight.Name = "buttonMoveDownRight";
+            this.buttonMoveDownRight.Size = new System.Drawing.Size(75, 70);
+            this.buttonMoveDownRight.TabIndex = 38;
+            this.buttonMoveDownRight.UseVisualStyleBackColor = true;
+            // 
+            // buttonMoveDownLeft
+            // 
+            this.buttonMoveDownLeft.BackgroundImage = global::DrawingShapes.Properties.Resources.arrow_down_left;
+            this.buttonMoveDownLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonMoveDownLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonMoveDownLeft.Location = new System.Drawing.Point(504, 203);
+            this.buttonMoveDownLeft.Name = "buttonMoveDownLeft";
+            this.buttonMoveDownLeft.Size = new System.Drawing.Size(75, 70);
+            this.buttonMoveDownLeft.TabIndex = 37;
+            this.buttonMoveDownLeft.UseVisualStyleBackColor = true;
+            // 
+            // buttonMoveUpRight
+            // 
+            this.buttonMoveUpRight.BackgroundImage = global::DrawingShapes.Properties.Resources.arrow_up_right;
+            this.buttonMoveUpRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonMoveUpRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonMoveUpRight.Location = new System.Drawing.Point(675, 62);
+            this.buttonMoveUpRight.Name = "buttonMoveUpRight";
+            this.buttonMoveUpRight.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.buttonMoveUpRight.Size = new System.Drawing.Size(75, 70);
+            this.buttonMoveUpRight.TabIndex = 36;
+            this.buttonMoveUpRight.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonMoveUpRight.UseVisualStyleBackColor = true;
+            // 
+            // buttonMoveUpLeft
+            // 
+            this.buttonMoveUpLeft.BackgroundImage = global::DrawingShapes.Properties.Resources.arrow_up_left;
+            this.buttonMoveUpLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonMoveUpLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonMoveUpLeft.Location = new System.Drawing.Point(504, 62);
+            this.buttonMoveUpLeft.Name = "buttonMoveUpLeft";
+            this.buttonMoveUpLeft.Size = new System.Drawing.Size(75, 70);
+            this.buttonMoveUpLeft.TabIndex = 35;
+            this.buttonMoveUpLeft.UseVisualStyleBackColor = true;
+            // 
+            // buttonMoveDown
+            // 
+            this.buttonMoveDown.BackgroundImage = global::DrawingShapes.Properties.Resources.arrow_down;
+            this.buttonMoveDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonMoveDown.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonMoveDown.Location = new System.Drawing.Point(601, 203);
+            this.buttonMoveDown.Name = "buttonMoveDown";
+            this.buttonMoveDown.Size = new System.Drawing.Size(52, 70);
+            this.buttonMoveDown.TabIndex = 34;
+            this.buttonMoveDown.UseVisualStyleBackColor = true;
+            // 
+            // buttonMoveRight
+            // 
+            this.buttonMoveRight.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMoveRight.BackgroundImage")));
+            this.buttonMoveRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonMoveRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonMoveRight.Location = new System.Drawing.Point(675, 147);
+            this.buttonMoveRight.Name = "buttonMoveRight";
+            this.buttonMoveRight.Size = new System.Drawing.Size(75, 43);
+            this.buttonMoveRight.TabIndex = 33;
+            this.buttonMoveRight.UseVisualStyleBackColor = true;
+            // 
+            // buttonMoveLeft
+            // 
+            this.buttonMoveLeft.BackgroundImage = global::DrawingShapes.Properties.Resources.arrow_left;
+            this.buttonMoveLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonMoveLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonMoveLeft.Location = new System.Drawing.Point(504, 147);
+            this.buttonMoveLeft.Name = "buttonMoveLeft";
+            this.buttonMoveLeft.Size = new System.Drawing.Size(75, 43);
+            this.buttonMoveLeft.TabIndex = 32;
+            this.buttonMoveLeft.UseVisualStyleBackColor = true;
+            // 
+            // buttonMoveUp
+            // 
+            this.buttonMoveUp.BackgroundImage = global::DrawingShapes.Properties.Resources.arrow_up;
+            this.buttonMoveUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonMoveUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonMoveUp.Location = new System.Drawing.Point(601, 62);
+            this.buttonMoveUp.Name = "buttonMoveUp";
+            this.buttonMoveUp.Size = new System.Drawing.Size(52, 70);
+            this.buttonMoveUp.TabIndex = 30;
+            this.buttonMoveUp.UseVisualStyleBackColor = true;
+            this.buttonMoveUp.Click += new System.EventHandler(this.buttonMoveUp_Click);
             // 
             // Form1
             // 
