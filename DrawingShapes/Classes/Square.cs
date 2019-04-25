@@ -36,7 +36,7 @@ namespace Shapes
         {
             double perimeter = this.CalculatePerimeter();
             double area = this.CalculateArea();
-            String description = "Width = "+ this.width + "\r\n"; 
+            String description = "Side = "+ this.width + "\r\n"; 
             description += "Perimeter = " + Math.Round(perimeter)+ "\r\n";
             description += "Area = " + Math.Round(area) + "\r\n";
 
