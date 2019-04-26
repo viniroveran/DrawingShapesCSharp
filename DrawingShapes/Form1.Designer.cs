@@ -66,26 +66,26 @@
             // 
             // textBoxHeight
             // 
-            this.textBoxHeight.Location = new System.Drawing.Point(421, 19);
+            this.textBoxHeight.Location = new System.Drawing.Point(171, 69);
             this.textBoxHeight.Name = "textBoxHeight";
             this.textBoxHeight.Size = new System.Drawing.Size(46, 20);
-            this.textBoxHeight.TabIndex = 0;
+            this.textBoxHeight.TabIndex = 7;
             this.textBoxHeight.Text = "5";
             this.textBoxHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHeight_KeyPress);
             // 
             // textBoxWidth
             // 
-            this.textBoxWidth.Location = new System.Drawing.Point(421, 45);
+            this.textBoxWidth.Location = new System.Drawing.Point(171, 95);
             this.textBoxWidth.Name = "textBoxWidth";
             this.textBoxWidth.Size = new System.Drawing.Size(46, 20);
-            this.textBoxWidth.TabIndex = 1;
+            this.textBoxWidth.TabIndex = 8;
             this.textBoxWidth.Text = "5";
             this.textBoxWidth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxWidth_KeyPress);
             // 
             // labelWidth
             // 
             this.labelWidth.AutoSize = true;
-            this.labelWidth.Location = new System.Drawing.Point(374, 48);
+            this.labelWidth.Location = new System.Drawing.Point(124, 98);
             this.labelWidth.Name = "labelWidth";
             this.labelWidth.Size = new System.Drawing.Size(35, 13);
             this.labelWidth.TabIndex = 4;
@@ -94,7 +94,7 @@
             // labelHeight
             // 
             this.labelHeight.AutoSize = true;
-            this.labelHeight.Location = new System.Drawing.Point(374, 22);
+            this.labelHeight.Location = new System.Drawing.Point(124, 72);
             this.labelHeight.Name = "labelHeight";
             this.labelHeight.Size = new System.Drawing.Size(38, 13);
             this.labelHeight.TabIndex = 5;
@@ -102,11 +102,11 @@
             // 
             // textBoxDisplay
             // 
-            this.textBoxDisplay.Location = new System.Drawing.Point(294, 75);
+            this.textBoxDisplay.Location = new System.Drawing.Point(44, 125);
             this.textBoxDisplay.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxDisplay.Multiline = true;
             this.textBoxDisplay.Name = "textBoxDisplay";
-            this.textBoxDisplay.Size = new System.Drawing.Size(173, 172);
+            this.textBoxDisplay.Size = new System.Drawing.Size(173, 85);
             this.textBoxDisplay.TabIndex = 8;
             // 
             // radioButtonRectangle
@@ -116,7 +116,7 @@
             this.radioButtonRectangle.Margin = new System.Windows.Forms.Padding(1);
             this.radioButtonRectangle.Name = "radioButtonRectangle";
             this.radioButtonRectangle.Size = new System.Drawing.Size(74, 17);
-            this.radioButtonRectangle.TabIndex = 13;
+            this.radioButtonRectangle.TabIndex = 1;
             this.radioButtonRectangle.TabStop = true;
             this.radioButtonRectangle.Text = "Rectangle";
             this.radioButtonRectangle.UseVisualStyleBackColor = true;
@@ -124,7 +124,7 @@
             // 
             // buttonDraw
             // 
-            this.buttonDraw.Location = new System.Drawing.Point(396, 253);
+            this.buttonDraw.Location = new System.Drawing.Point(163, 213);
             this.buttonDraw.Margin = new System.Windows.Forms.Padding(1);
             this.buttonDraw.Name = "buttonDraw";
             this.buttonDraw.Size = new System.Drawing.Size(54, 33);
@@ -136,11 +136,11 @@
             // panelDrawing
             // 
             this.panelDrawing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelDrawing.Location = new System.Drawing.Point(25, 75);
+            this.panelDrawing.Location = new System.Drawing.Point(25, 250);
             this.panelDrawing.Margin = new System.Windows.Forms.Padding(1);
             this.panelDrawing.Name = "panelDrawing";
-            this.panelDrawing.Size = new System.Drawing.Size(213, 172);
-            this.panelDrawing.TabIndex = 15;
+            this.panelDrawing.Size = new System.Drawing.Size(478, 376);
+            this.panelDrawing.TabIndex = 19;
             this.panelDrawing.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDrawing_Paint);
             // 
             // groupBox1
@@ -165,7 +165,7 @@
             this.radioButtonEllipse.Margin = new System.Windows.Forms.Padding(1);
             this.radioButtonEllipse.Name = "radioButtonEllipse";
             this.radioButtonEllipse.Size = new System.Drawing.Size(53, 17);
-            this.radioButtonEllipse.TabIndex = 16;
+            this.radioButtonEllipse.TabIndex = 4;
             this.radioButtonEllipse.TabStop = true;
             this.radioButtonEllipse.Text = "Elipse";
             this.radioButtonEllipse.UseVisualStyleBackColor = true;
@@ -178,7 +178,7 @@
             this.radioButtonCircle.Margin = new System.Windows.Forms.Padding(1);
             this.radioButtonCircle.Name = "radioButtonCircle";
             this.radioButtonCircle.Size = new System.Drawing.Size(51, 17);
-            this.radioButtonCircle.TabIndex = 15;
+            this.radioButtonCircle.TabIndex = 3;
             this.radioButtonCircle.TabStop = true;
             this.radioButtonCircle.Text = "Circle";
             this.radioButtonCircle.UseVisualStyleBackColor = true;
@@ -191,7 +191,7 @@
             this.radioButtonSquare.Margin = new System.Windows.Forms.Padding(1);
             this.radioButtonSquare.Name = "radioButtonSquare";
             this.radioButtonSquare.Size = new System.Drawing.Size(59, 17);
-            this.radioButtonSquare.TabIndex = 14;
+            this.radioButtonSquare.TabIndex = 2;
             this.radioButtonSquare.TabStop = true;
             this.radioButtonSquare.Text = "Square";
             this.radioButtonSquare.UseVisualStyleBackColor = true;
@@ -204,7 +204,7 @@
             0,
             0,
             0});
-            this.numericUpDowndX.Location = new System.Drawing.Point(585, 163);
+            this.numericUpDowndX.Location = new System.Drawing.Point(338, 136);
             this.numericUpDowndX.Minimum = new decimal(new int[] {
             10,
             0,
@@ -212,7 +212,7 @@
             0});
             this.numericUpDowndX.Name = "numericUpDowndX";
             this.numericUpDowndX.Size = new System.Drawing.Size(39, 20);
-            this.numericUpDowndX.TabIndex = 22;
+            this.numericUpDowndX.TabIndex = 17;
             this.numericUpDowndX.Value = new decimal(new int[] {
             10,
             0,
@@ -226,7 +226,7 @@
             0,
             0,
             0});
-            this.numericUpDowndY.Location = new System.Drawing.Point(630, 163);
+            this.numericUpDowndY.Location = new System.Drawing.Point(383, 136);
             this.numericUpDowndY.Minimum = new decimal(new int[] {
             10,
             0,
@@ -234,7 +234,7 @@
             0});
             this.numericUpDowndY.Name = "numericUpDowndY";
             this.numericUpDowndY.Size = new System.Drawing.Size(39, 20);
-            this.numericUpDowndY.TabIndex = 23;
+            this.numericUpDowndY.TabIndex = 18;
             this.numericUpDowndY.Value = new decimal(new int[] {
             10,
             0,
@@ -244,7 +244,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(591, 147);
+            this.label5.Location = new System.Drawing.Point(344, 120);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 13);
             this.label5.TabIndex = 24;
@@ -253,7 +253,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(640, 147);
+            this.label6.Location = new System.Drawing.Point(393, 120);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(20, 13);
             this.label6.TabIndex = 25;
@@ -262,7 +262,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(295, 22);
+            this.label3.Location = new System.Drawing.Point(45, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(14, 13);
             this.label3.TabIndex = 29;
@@ -271,7 +271,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(295, 48);
+            this.label4.Location = new System.Drawing.Point(45, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(14, 13);
             this.label4.TabIndex = 28;
@@ -279,19 +279,19 @@
             // 
             // textBoxY
             // 
-            this.textBoxY.Location = new System.Drawing.Point(315, 45);
+            this.textBoxY.Location = new System.Drawing.Point(65, 95);
             this.textBoxY.Name = "textBoxY";
             this.textBoxY.Size = new System.Drawing.Size(46, 20);
-            this.textBoxY.TabIndex = 27;
+            this.textBoxY.TabIndex = 6;
             this.textBoxY.Text = "0";
             this.textBoxY.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxY_KeyPress);
             // 
             // textBoxX
             // 
-            this.textBoxX.Location = new System.Drawing.Point(315, 19);
+            this.textBoxX.Location = new System.Drawing.Point(65, 69);
             this.textBoxX.Name = "textBoxX";
             this.textBoxX.Size = new System.Drawing.Size(46, 20);
-            this.textBoxX.TabIndex = 26;
+            this.textBoxX.TabIndex = 5;
             this.textBoxX.Text = "0";
             this.textBoxX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxX_KeyPress);
             // 
@@ -300,7 +300,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(549, 15);
+            this.label7.Location = new System.Drawing.Point(292, 8);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(173, 24);
             this.label7.TabIndex = 39;
@@ -311,10 +311,10 @@
             this.buttonMoveDownRight.BackgroundImage = global::DrawingShapes.Properties.Resources.arrow_down_right;
             this.buttonMoveDownRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonMoveDownRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMoveDownRight.Location = new System.Drawing.Point(675, 203);
+            this.buttonMoveDownRight.Location = new System.Drawing.Point(428, 176);
             this.buttonMoveDownRight.Name = "buttonMoveDownRight";
             this.buttonMoveDownRight.Size = new System.Drawing.Size(75, 70);
-            this.buttonMoveDownRight.TabIndex = 38;
+            this.buttonMoveDownRight.TabIndex = 16;
             this.buttonMoveDownRight.UseVisualStyleBackColor = true;
             this.buttonMoveDownRight.Click += new System.EventHandler(this.buttonMoveDownRight_Click);
             // 
@@ -323,10 +323,10 @@
             this.buttonMoveDownLeft.BackgroundImage = global::DrawingShapes.Properties.Resources.arrow_down_left;
             this.buttonMoveDownLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonMoveDownLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMoveDownLeft.Location = new System.Drawing.Point(504, 203);
+            this.buttonMoveDownLeft.Location = new System.Drawing.Point(257, 176);
             this.buttonMoveDownLeft.Name = "buttonMoveDownLeft";
             this.buttonMoveDownLeft.Size = new System.Drawing.Size(75, 70);
-            this.buttonMoveDownLeft.TabIndex = 37;
+            this.buttonMoveDownLeft.TabIndex = 14;
             this.buttonMoveDownLeft.UseVisualStyleBackColor = true;
             this.buttonMoveDownLeft.Click += new System.EventHandler(this.buttonMoveDownLeft_Click);
             // 
@@ -335,11 +335,11 @@
             this.buttonMoveUpRight.BackgroundImage = global::DrawingShapes.Properties.Resources.arrow_up_right;
             this.buttonMoveUpRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonMoveUpRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMoveUpRight.Location = new System.Drawing.Point(675, 62);
+            this.buttonMoveUpRight.Location = new System.Drawing.Point(428, 35);
             this.buttonMoveUpRight.Name = "buttonMoveUpRight";
             this.buttonMoveUpRight.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.buttonMoveUpRight.Size = new System.Drawing.Size(75, 70);
-            this.buttonMoveUpRight.TabIndex = 36;
+            this.buttonMoveUpRight.TabIndex = 11;
             this.buttonMoveUpRight.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonMoveUpRight.UseVisualStyleBackColor = true;
             this.buttonMoveUpRight.Click += new System.EventHandler(this.buttonMoveUpRight_Click);
@@ -349,10 +349,10 @@
             this.buttonMoveUpLeft.BackgroundImage = global::DrawingShapes.Properties.Resources.arrow_up_left;
             this.buttonMoveUpLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonMoveUpLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMoveUpLeft.Location = new System.Drawing.Point(504, 62);
+            this.buttonMoveUpLeft.Location = new System.Drawing.Point(257, 35);
             this.buttonMoveUpLeft.Name = "buttonMoveUpLeft";
             this.buttonMoveUpLeft.Size = new System.Drawing.Size(75, 70);
-            this.buttonMoveUpLeft.TabIndex = 35;
+            this.buttonMoveUpLeft.TabIndex = 9;
             this.buttonMoveUpLeft.UseVisualStyleBackColor = true;
             this.buttonMoveUpLeft.Click += new System.EventHandler(this.buttonMoveUpLeft_Click);
             // 
@@ -361,10 +361,10 @@
             this.buttonMoveDown.BackgroundImage = global::DrawingShapes.Properties.Resources.arrow_down;
             this.buttonMoveDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonMoveDown.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMoveDown.Location = new System.Drawing.Point(601, 203);
+            this.buttonMoveDown.Location = new System.Drawing.Point(354, 176);
             this.buttonMoveDown.Name = "buttonMoveDown";
             this.buttonMoveDown.Size = new System.Drawing.Size(52, 70);
-            this.buttonMoveDown.TabIndex = 34;
+            this.buttonMoveDown.TabIndex = 15;
             this.buttonMoveDown.UseVisualStyleBackColor = true;
             this.buttonMoveDown.Click += new System.EventHandler(this.buttonMoveDown_Click);
             // 
@@ -373,10 +373,10 @@
             this.buttonMoveRight.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMoveRight.BackgroundImage")));
             this.buttonMoveRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonMoveRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMoveRight.Location = new System.Drawing.Point(675, 147);
+            this.buttonMoveRight.Location = new System.Drawing.Point(428, 120);
             this.buttonMoveRight.Name = "buttonMoveRight";
             this.buttonMoveRight.Size = new System.Drawing.Size(75, 43);
-            this.buttonMoveRight.TabIndex = 33;
+            this.buttonMoveRight.TabIndex = 13;
             this.buttonMoveRight.UseVisualStyleBackColor = true;
             this.buttonMoveRight.Click += new System.EventHandler(this.buttonMoveRight_Click);
             // 
@@ -385,10 +385,10 @@
             this.buttonMoveLeft.BackgroundImage = global::DrawingShapes.Properties.Resources.arrow_left;
             this.buttonMoveLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonMoveLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMoveLeft.Location = new System.Drawing.Point(504, 147);
+            this.buttonMoveLeft.Location = new System.Drawing.Point(257, 120);
             this.buttonMoveLeft.Name = "buttonMoveLeft";
             this.buttonMoveLeft.Size = new System.Drawing.Size(75, 43);
-            this.buttonMoveLeft.TabIndex = 32;
+            this.buttonMoveLeft.TabIndex = 12;
             this.buttonMoveLeft.UseVisualStyleBackColor = true;
             this.buttonMoveLeft.Click += new System.EventHandler(this.buttonMoveLeft_Click);
             // 
@@ -397,16 +397,16 @@
             this.buttonMoveUp.BackgroundImage = global::DrawingShapes.Properties.Resources.arrow_up;
             this.buttonMoveUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonMoveUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMoveUp.Location = new System.Drawing.Point(601, 62);
+            this.buttonMoveUp.Location = new System.Drawing.Point(354, 35);
             this.buttonMoveUp.Name = "buttonMoveUp";
             this.buttonMoveUp.Size = new System.Drawing.Size(52, 70);
-            this.buttonMoveUp.TabIndex = 30;
+            this.buttonMoveUp.TabIndex = 10;
             this.buttonMoveUp.UseVisualStyleBackColor = true;
             this.buttonMoveUp.Click += new System.EventHandler(this.buttonMoveUp_Click_1);
             // 
             // buttonFill
             // 
-            this.buttonFill.Location = new System.Drawing.Point(315, 253);
+            this.buttonFill.Location = new System.Drawing.Point(44, 213);
             this.buttonFill.Margin = new System.Windows.Forms.Padding(1);
             this.buttonFill.Name = "buttonFill";
             this.buttonFill.Size = new System.Drawing.Size(54, 33);
@@ -419,7 +419,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 292);
+            this.ClientSize = new System.Drawing.Size(532, 636);
             this.Controls.Add(this.buttonFill);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.buttonMoveDownRight);
