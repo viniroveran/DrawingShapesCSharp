@@ -107,7 +107,7 @@
             this.textBoxDisplay.Multiline = true;
             this.textBoxDisplay.Name = "textBoxDisplay";
             this.textBoxDisplay.Size = new System.Drawing.Size(173, 85);
-            this.textBoxDisplay.TabIndex = 8;
+            this.textBoxDisplay.TabIndex = 20;
             // 
             // radioButtonRectangle
             // 
