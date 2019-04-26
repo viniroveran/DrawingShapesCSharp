@@ -61,10 +61,11 @@ namespace Shapes
             // Rectangle
             if (this.radioButtonRectangle.Checked == true)
             {
-                int width = Convert.ToInt32(this.textBoxWidth.Text);
-                int height = Convert.ToInt32(this.textBoxHeight.Text);
                 int x = Convert.ToInt32(this.textBoxX.Text);
                 int y = Convert.ToInt32(this.textBoxY.Text);
+                int height = Convert.ToInt32(this.textBoxHeight.Text);
+                int width = Convert.ToInt32(this.textBoxWidth.Text);
+                
                 myRectangle = new Rectangle(x, y, height, width);
 
                 // fill or draw?
@@ -78,9 +79,10 @@ namespace Shapes
             // Square
             if (this.radioButtonSquare.Checked == true)
             {
-                int width = Convert.ToInt32(this.textBoxWidth.Text);
                 int x = Convert.ToInt32(this.textBoxX.Text);
                 int y = Convert.ToInt32(this.textBoxY.Text);
+                int width = Convert.ToInt32(this.textBoxWidth.Text);
+                
                 mySquare = new Square(x, y, width);
 
                 // fill or draw?
@@ -94,9 +96,10 @@ namespace Shapes
             // Circle
             if (this.radioButtonCircle.Checked == true)
             {
-                int width = Convert.ToInt32(this.textBoxWidth.Text);
                 int x = Convert.ToInt32(this.textBoxX.Text);
                 int y = Convert.ToInt32(this.textBoxY.Text);
+                int width = Convert.ToInt32(this.textBoxWidth.Text);
+                
                 myCircle = new Circle(x, y, width);
 
                 // fill or draw?
@@ -110,10 +113,11 @@ namespace Shapes
             // Ellipse
             if (this.radioButtonEllipse.Checked == true)
             {
-                int width = Convert.ToInt32(this.textBoxWidth.Text);
-                int height = Convert.ToInt32(this.textBoxHeight.Text);
                 int x = Convert.ToInt32(this.textBoxX.Text);
                 int y = Convert.ToInt32(this.textBoxY.Text);
+                int height = Convert.ToInt32(this.textBoxHeight.Text);
+                int width = Convert.ToInt32(this.textBoxWidth.Text);
+                
                 myEllipse = new Ellipse(x, y, height, width);
 
                 // fill or draw?
@@ -127,7 +131,7 @@ namespace Shapes
 
             this.panelDrawing.Invalidate(); // it causes the control to be redrawn
             this.panelDrawing.Update();
-            this.Refresh();                                                      
+            this.Refresh();
         }
         //the class PaintEventArgs provides data for the object event Paint 
         private void panelDrawing_Paint(object sender, PaintEventArgs e)
@@ -244,8 +248,8 @@ namespace Shapes
             // Rectangle
             if (this.radioButtonRectangle.Checked == true)
             {
-                int width = Convert.ToInt32(this.textBoxWidth.Text);
                 int height = Convert.ToInt32(this.textBoxHeight.Text);
+                int width = Convert.ToInt32(this.textBoxWidth.Text);
                 int x = Convert.ToInt32(this.textBoxX.Text);
                 int y = Convert.ToInt32(this.textBoxY.Text);
                 myRectangle = new Rectangle(x, y, height, width);
@@ -293,8 +297,8 @@ namespace Shapes
             // Ellipse
             if (this.radioButtonEllipse.Checked == true)
             {
-                int width = Convert.ToInt32(this.textBoxWidth.Text);
                 int height = Convert.ToInt32(this.textBoxHeight.Text);
+                int width = Convert.ToInt32(this.textBoxWidth.Text);
                 int x = Convert.ToInt32(this.textBoxX.Text);
                 int y = Convert.ToInt32(this.textBoxY.Text);
                 myEllipse = new Ellipse(x, y, height, width);
@@ -309,6 +313,70 @@ namespace Shapes
             }
 
             this.panelDrawing.Invalidate(); // it causes the control to be redrawn
+            this.panelDrawing.Update();
+            this.Refresh();
+        }
+
+        private void buttonMoveUp_Click_1(object sender, EventArgs e)
+        {
+            int x = myRectangle.X;
+            int y = myRectangle.Y;
+            int height = myRectangle.Height;
+            int width = myRectangle.Width;
+            
+
+            int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+            myRectangle = new Rectangle(x, y - dY, height, width);
+
+            this.panelDrawing.Invalidate();
+            this.panelDrawing.Update();
+            this.Refresh();
+        }
+
+        private void buttonMoveDown_Click(object sender, EventArgs e)
+        {
+            int x = myRectangle.X;
+            int y = myRectangle.Y;
+            int height = myRectangle.Height;
+            int width = myRectangle.Width;
+
+
+            int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+            myRectangle = new Rectangle(x, y + dY, height, width);
+
+            this.panelDrawing.Invalidate();
+            this.panelDrawing.Update();
+            this.Refresh();
+        }
+
+        private void buttonMoveLeft_Click(object sender, EventArgs e)
+        {
+            int x = myRectangle.X;
+            int y = myRectangle.Y;
+            int height = myRectangle.Height;
+            int width = myRectangle.Width;
+
+
+            int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+            myRectangle = new Rectangle(x - dX, y, height, width);
+
+            this.panelDrawing.Invalidate();
+            this.panelDrawing.Update();
+            this.Refresh();
+        }
+
+        private void buttonMoveRight_Click(object sender, EventArgs e)
+        {
+            int x = myRectangle.X;
+            int y = myRectangle.Y;
+            int height = myRectangle.Height;
+            int width = myRectangle.Width;
+
+
+            int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+            myRectangle = new Rectangle(x + dX, y, height, width);
+
+            this.panelDrawing.Invalidate();
             this.panelDrawing.Update();
             this.Refresh();
         }

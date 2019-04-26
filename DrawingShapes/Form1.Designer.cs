@@ -41,8 +41,8 @@
             this.radioButtonEllipse = new System.Windows.Forms.RadioButton();
             this.radioButtonCircle = new System.Windows.Forms.RadioButton();
             this.radioButtonSquare = new System.Windows.Forms.RadioButton();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDowndX = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDowndY = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,8 +60,8 @@
             this.buttonMoveUp = new System.Windows.Forms.Button();
             this.buttonFill = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDowndX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDowndY)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxHeight
@@ -195,45 +195,45 @@
             this.radioButtonSquare.UseVisualStyleBackColor = true;
             this.radioButtonSquare.CheckedChanged += new System.EventHandler(this.radioButtonSquare_CheckedChanged);
             // 
-            // numericUpDown1
+            // numericUpDowndX
             // 
-            this.numericUpDown1.Increment = new decimal(new int[] {
+            this.numericUpDowndX.Increment = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.numericUpDown1.Location = new System.Drawing.Point(585, 163);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.numericUpDowndX.Location = new System.Drawing.Point(585, 163);
+            this.numericUpDowndX.Minimum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(39, 20);
-            this.numericUpDown1.TabIndex = 22;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numericUpDowndX.Name = "numericUpDowndX";
+            this.numericUpDowndX.Size = new System.Drawing.Size(39, 20);
+            this.numericUpDowndX.TabIndex = 22;
+            this.numericUpDowndX.Value = new decimal(new int[] {
             10,
             0,
             0,
             0});
             // 
-            // numericUpDown2
+            // numericUpDowndY
             // 
-            this.numericUpDown2.Increment = new decimal(new int[] {
+            this.numericUpDowndY.Increment = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.numericUpDown2.Location = new System.Drawing.Point(630, 163);
-            this.numericUpDown2.Minimum = new decimal(new int[] {
+            this.numericUpDowndY.Location = new System.Drawing.Point(630, 163);
+            this.numericUpDowndY.Minimum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(39, 20);
-            this.numericUpDown2.TabIndex = 23;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.numericUpDowndY.Name = "numericUpDowndY";
+            this.numericUpDowndY.Size = new System.Drawing.Size(39, 20);
+            this.numericUpDowndY.TabIndex = 23;
+            this.numericUpDowndY.Value = new decimal(new int[] {
             10,
             0,
             0,
@@ -358,6 +358,7 @@
             this.buttonMoveDown.Size = new System.Drawing.Size(52, 70);
             this.buttonMoveDown.TabIndex = 34;
             this.buttonMoveDown.UseVisualStyleBackColor = true;
+            this.buttonMoveDown.Click += new System.EventHandler(this.buttonMoveDown_Click);
             // 
             // buttonMoveRight
             // 
@@ -369,6 +370,7 @@
             this.buttonMoveRight.Size = new System.Drawing.Size(75, 43);
             this.buttonMoveRight.TabIndex = 33;
             this.buttonMoveRight.UseVisualStyleBackColor = true;
+            this.buttonMoveRight.Click += new System.EventHandler(this.buttonMoveRight_Click);
             // 
             // buttonMoveLeft
             // 
@@ -380,6 +382,7 @@
             this.buttonMoveLeft.Size = new System.Drawing.Size(75, 43);
             this.buttonMoveLeft.TabIndex = 32;
             this.buttonMoveLeft.UseVisualStyleBackColor = true;
+            this.buttonMoveLeft.Click += new System.EventHandler(this.buttonMoveLeft_Click);
             // 
             // buttonMoveUp
             // 
@@ -391,7 +394,7 @@
             this.buttonMoveUp.Size = new System.Drawing.Size(52, 70);
             this.buttonMoveUp.TabIndex = 30;
             this.buttonMoveUp.UseVisualStyleBackColor = true;
-            this.buttonMoveUp.Click += new System.EventHandler(this.buttonMoveUp_Click);
+            this.buttonMoveUp.Click += new System.EventHandler(this.buttonMoveUp_Click_1);
             // 
             // buttonFill
             // 
@@ -425,8 +428,8 @@
             this.Controls.Add(this.textBoxX);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericUpDowndY);
+            this.Controls.Add(this.numericUpDowndX);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelDrawing);
             this.Controls.Add(this.buttonDraw);
@@ -440,8 +443,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDowndX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDowndY)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -459,10 +462,10 @@
         private System.Windows.Forms.Panel panelDrawing;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButtonSquare;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDowndX;
         private System.Windows.Forms.RadioButton radioButtonEllipse;
         private System.Windows.Forms.RadioButton radioButtonCircle;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDowndY;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
