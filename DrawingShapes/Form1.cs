@@ -23,6 +23,15 @@ namespace Shapes
             InitializeComponent();
         }
 
+        private static void Validate_Int(KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show("Must be a digit only. \n");
+                e.Handled = true;
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             reset();
@@ -319,134 +328,534 @@ namespace Shapes
 
         private void buttonMoveUp_Click_1(object sender, EventArgs e)
         {
-            int x = myRectangle.X;
-            int y = myRectangle.Y;
-            int height = myRectangle.Height;
-            int width = myRectangle.Width;
-            
+            // Rectangle
+            if (this.radioButtonRectangle.Checked == true)
+            {
+                int x = myRectangle.X;
+                int y = myRectangle.Y;
+                int height = myRectangle.Height;
+                int width = myRectangle.Width;
 
-            int dY = Convert.ToInt32(this.numericUpDowndY.Value);
-            myRectangle = new Rectangle(x, y - dY, height, width);
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                myRectangle = new Rectangle(x, y - dY, height, width);
 
-            this.panelDrawing.Invalidate();
-            this.panelDrawing.Update();
-            this.Refresh();
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Square
+            if (this.radioButtonSquare.Checked == true)
+            {
+                int x = mySquare.X;
+                int y = mySquare.Y;
+                int width = mySquare.Width;
+
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                mySquare = new Square(x, y - dY, width);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Circle
+            if (this.radioButtonCircle.Checked == true)
+            {
+                int x = myCircle.X;
+                int y = myCircle.Y;
+                int radius = myCircle.Radius;
+
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                myCircle = new Circle(x, y - dY, radius);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Ellipse
+            if (this.radioButtonEllipse.Checked == true)
+            {
+                int x = myEllipse.X;
+                int y = myEllipse.Y;
+                int height = myEllipse.Radius_1;
+                int width = myEllipse.Radius_2;
+
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                myEllipse = new Ellipse(x, y - dY, height, width);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
         }
 
         private void buttonMoveDown_Click(object sender, EventArgs e)
         {
-            int x = myRectangle.X;
-            int y = myRectangle.Y;
-            int height = myRectangle.Height;
-            int width = myRectangle.Width;
+            // Rectangle
+            if (this.radioButtonRectangle.Checked == true)
+            {
+                int x = myRectangle.X;
+                int y = myRectangle.Y;
+                int height = myRectangle.Height;
+                int width = myRectangle.Width;
 
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                myRectangle = new Rectangle(x, y + dY, height, width);
 
-            int dY = Convert.ToInt32(this.numericUpDowndY.Value);
-            myRectangle = new Rectangle(x, y + dY, height, width);
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Square
+            if (this.radioButtonSquare.Checked == true)
+            {
+                int x = mySquare.X;
+                int y = mySquare.Y;
+                int side = mySquare.Width;
 
-            this.panelDrawing.Invalidate();
-            this.panelDrawing.Update();
-            this.Refresh();
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                mySquare = new Square(x, y + dY, side);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Circle
+            if (this.radioButtonCircle.Checked == true)
+            {
+                int x = myCircle.X;
+                int y = myCircle.Y;
+                int radius = myCircle.Radius;
+
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                myCircle = new Circle(x, y + dY, radius);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Ellipse
+            if (this.radioButtonEllipse.Checked == true)
+            {
+                int x = myEllipse.X;
+                int y = myEllipse.Y;
+                int height = myEllipse.Radius_1;
+                int width = myEllipse.Radius_2;
+
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                myEllipse = new Ellipse(x, y + dY, height, width);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
         }
 
         private void buttonMoveLeft_Click(object sender, EventArgs e)
         {
-            int x = myRectangle.X;
-            int y = myRectangle.Y;
-            int height = myRectangle.Height;
-            int width = myRectangle.Width;
+            if (this.radioButtonRectangle.Checked == true)
+            {
+                // Rectangle
+                int x = myRectangle.X;
+                int y = myRectangle.Y;
+                int height = myRectangle.Height;
+                int width = myRectangle.Width;
 
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                myRectangle = new Rectangle(x - dX, y, height, width);
 
-            int dX = Convert.ToInt32(this.numericUpDowndX.Value);
-            myRectangle = new Rectangle(x - dX, y, height, width);
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Square
+            if (this.radioButtonSquare.Checked == true)
+            {
+                int x = mySquare.X;
+                int y = mySquare.Y;
+                int side = mySquare.Width;
 
-            this.panelDrawing.Invalidate();
-            this.panelDrawing.Update();
-            this.Refresh();
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                mySquare = new Square(x - dX, y, side);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Circle
+            if (this.radioButtonCircle.Checked == true)
+            {
+                int x = myCircle.X;
+                int y = myCircle.Y;
+                int radius = myCircle.Radius;
+
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                myCircle = new Circle(x - dX, y, radius);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Ellipse
+            if (this.radioButtonEllipse.Checked == true)
+            {
+                int x = myEllipse.X;
+                int y = myEllipse.Y;
+                int height = myEllipse.Radius_1;
+                int width = myEllipse.Radius_2;
+
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                myEllipse = new Ellipse(x - dX, y, height, width);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
         }
 
         private void buttonMoveRight_Click(object sender, EventArgs e)
         {
-            int x = myRectangle.X;
-            int y = myRectangle.Y;
-            int height = myRectangle.Height;
-            int width = myRectangle.Width;
+            // Rectangle
+            if (this.radioButtonRectangle.Checked == true)
+            {
+                int x = myRectangle.X;
+                int y = myRectangle.Y;
+                int height = myRectangle.Height;
+                int width = myRectangle.Width;
 
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                myRectangle = new Rectangle(x + dX, y, height, width);
 
-            int dX = Convert.ToInt32(this.numericUpDowndX.Value);
-            myRectangle = new Rectangle(x + dX, y, height, width);
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Square
+            if (this.radioButtonSquare.Checked == true)
+            {
+                int x = mySquare.X;
+                int y = mySquare.Y;
+                int side = mySquare.Width;
 
-            this.panelDrawing.Invalidate();
-            this.panelDrawing.Update();
-            this.Refresh();
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                mySquare = new Square(x + dX, y, side);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Circle
+            if (this.radioButtonCircle.Checked == true)
+            {
+                int x = myCircle.X;
+                int y = myCircle.Y;
+                int radius = myCircle.Radius;
+
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                myCircle = new Circle(x + dX, y, radius);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Ellipse
+            if (this.radioButtonEllipse.Checked == true)
+            {
+                int x = myEllipse.X;
+                int y = myEllipse.Y;
+                int height = myEllipse.Radius_1;
+                int width = myEllipse.Radius_2;
+
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                myEllipse = new Ellipse(x + dX, y, height, width);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
         }
 
         private void buttonMoveUpLeft_Click(object sender, EventArgs e)
         {
-            int x = myRectangle.X;
-            int y = myRectangle.Y;
-            int height = myRectangle.Height;
-            int width = myRectangle.Width;
+            // Rectangle
+            if (this.radioButtonRectangle.Checked == true)
+            {
+                int x = myRectangle.X;
+                int y = myRectangle.Y;
+                int height = myRectangle.Height;
+                int width = myRectangle.Width;
 
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                myRectangle = new Rectangle(x - dX, y - dY, height, width);
 
-            int dY = Convert.ToInt32(this.numericUpDowndY.Value);
-            int dX = Convert.ToInt32(this.numericUpDowndX.Value);
-            myRectangle = new Rectangle(x - dX, y - dY, height, width);
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Square
+            if (this.radioButtonSquare.Checked == true)
+            {
+                int x = mySquare.X;
+                int y = mySquare.Y;
+                int side = mySquare.Width;
 
-            this.panelDrawing.Invalidate();
-            this.panelDrawing.Update();
-            this.Refresh();
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                mySquare = new Square(x - dX, y - dY, side);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Circle
+            if (this.radioButtonCircle.Checked == true)
+            {
+                int x = myCircle.X;
+                int y = myCircle.Y;
+                int radius = myCircle.Radius;
+
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                myCircle = new Circle(x - dX, y - dY, radius);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Ellipse
+            if (this.radioButtonEllipse.Checked == true)
+            {
+                int x = myEllipse.X;
+                int y = myEllipse.Y;
+                int height = myEllipse.Radius_1;
+                int width = myEllipse.Radius_2;
+
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                myEllipse = new Ellipse(x - dX, y - dY, height, width);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
         }
 
         private void buttonMoveUpRight_Click(object sender, EventArgs e)
         {
-            int x = myRectangle.X;
-            int y = myRectangle.Y;
-            int height = myRectangle.Height;
-            int width = myRectangle.Width;
+            // Rectangle
+            if (this.radioButtonRectangle.Checked == true)
+            {
+                int x = myRectangle.X;
+                int y = myRectangle.Y;
+                int height = myRectangle.Height;
+                int width = myRectangle.Width;
 
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                myRectangle = new Rectangle(x + dX, y - dY, height, width);
 
-            int dY = Convert.ToInt32(this.numericUpDowndY.Value);
-            int dX = Convert.ToInt32(this.numericUpDowndX.Value);
-            myRectangle = new Rectangle(x + dX, y - dY, height, width);
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Square
+            if (this.radioButtonSquare.Checked == true)
+            {
+                int x = mySquare.X;
+                int y = mySquare.Y;
+                int side = mySquare.Width;
 
-            this.panelDrawing.Invalidate();
-            this.panelDrawing.Update();
-            this.Refresh();
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                mySquare = new Square(x + dX, y - dY, side);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Circle
+            if (this.radioButtonCircle.Checked == true)
+            {
+                int x = myCircle.X;
+                int y = myCircle.Y;
+                int radius = myCircle.Radius;
+
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                myCircle = new Circle(x + dX, y - dY, radius);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Ellipse
+            if (this.radioButtonEllipse.Checked == true)
+            {
+                int x = myEllipse.X;
+                int y = myEllipse.Y;
+                int height = myEllipse.Radius_1;
+                int width = myEllipse.Radius_2;
+
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                myEllipse = new Ellipse(x + dX, y - dY, height, width);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
         }
 
         private void buttonMoveDownLeft_Click(object sender, EventArgs e)
         {
-            int x = myRectangle.X;
-            int y = myRectangle.Y;
-            int height = myRectangle.Height;
-            int width = myRectangle.Width;
+            // Rectangle
+            if (this.radioButtonRectangle.Checked == true)
+            {
+                int x = myRectangle.X;
+                int y = myRectangle.Y;
+                int height = myRectangle.Height;
+                int width = myRectangle.Width;
 
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                myRectangle = new Rectangle(x - dX, y + dY, height, width);
 
-            int dY = Convert.ToInt32(this.numericUpDowndY.Value);
-            int dX = Convert.ToInt32(this.numericUpDowndX.Value);
-            myRectangle = new Rectangle(x - dX, y + dY, height, width);
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Square
+            if (this.radioButtonSquare.Checked == true)
+            {
+                int x = mySquare.X;
+                int y = mySquare.Y;
+                int side = mySquare.Width;
 
-            this.panelDrawing.Invalidate();
-            this.panelDrawing.Update();
-            this.Refresh();
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                mySquare = new Square(x - dX, y + dY, side);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Circle
+            if (this.radioButtonCircle.Checked == true)
+            {
+                int x = myCircle.X;
+                int y = myCircle.Y;
+                int radius = myCircle.Radius;
+
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                myCircle = new Circle(x - dX, y + dY, radius);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Ellipse
+            if (this.radioButtonEllipse.Checked == true)
+            {
+                int x = myEllipse.X;
+                int y = myEllipse.Y;
+                int height = myEllipse.Radius_1;
+                int width = myEllipse.Radius_2;
+
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                myEllipse = new Ellipse(x - dX, y + dY, height, width);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
         }
 
         private void buttonMoveDownRight_Click(object sender, EventArgs e)
         {
-            int x = myRectangle.X;
-            int y = myRectangle.Y;
-            int height = myRectangle.Height;
-            int width = myRectangle.Width;
+            // Rectangle
+            if (this.radioButtonRectangle.Checked == true)
+            {
+                int x = myRectangle.X;
+                int y = myRectangle.Y;
+                int height = myRectangle.Height;
+                int width = myRectangle.Width;
 
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                myRectangle = new Rectangle(x + dX, y + dY, height, width);
 
-            int dY = Convert.ToInt32(this.numericUpDowndY.Value);
-            int dX = Convert.ToInt32(this.numericUpDowndX.Value);
-            myRectangle = new Rectangle(x + dX, y + dY, height, width);
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Square
+            if (this.radioButtonSquare.Checked == true)
+            {
+                int x = mySquare.X;
+                int y = mySquare.Y;
+                int side = mySquare.Width;
 
-            this.panelDrawing.Invalidate();
-            this.panelDrawing.Update();
-            this.Refresh();
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                mySquare = new Square(x + dX, y + dY, side);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Circle
+            if (this.radioButtonCircle.Checked == true)
+            {
+                int x = myCircle.X;
+                int y = myCircle.Y;
+                int radius = myCircle.Radius;
+
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                myCircle = new Circle(x + dX, y + dY, radius);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+            // Ellipse
+            if (this.radioButtonEllipse.Checked == true)
+            {
+                int x = myEllipse.X;
+                int y = myEllipse.Y;
+                int height = myEllipse.Radius_1;
+                int width = myEllipse.Radius_2;
+
+                int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+                int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+                myEllipse = new Ellipse(x + dX, y + dY, height, width);
+
+                this.panelDrawing.Invalidate();
+                this.panelDrawing.Update();
+                this.Refresh();
+            }
+        }
+
+        private void textBoxX_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validate_Int(e);
+        }
+
+        private void textBoxY_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validate_Int(e);
+        }
+
+        private void textBoxHeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validate_Int(e);
+        }
+
+        private void textBoxWidth_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validate_Int(e);
         }
     }
 }
