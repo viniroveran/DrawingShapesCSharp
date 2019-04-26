@@ -446,6 +446,7 @@
             this.Controls.Add(this.labelWidth);
             this.Controls.Add(this.textBoxWidth);
             this.Controls.Add(this.textBoxHeight);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Drawing Shapes";
             this.Load += new System.EventHandler(this.Form1_Load);
