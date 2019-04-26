@@ -380,5 +380,73 @@ namespace Shapes
             this.panelDrawing.Update();
             this.Refresh();
         }
+
+        private void buttonMoveUpLeft_Click(object sender, EventArgs e)
+        {
+            int x = myRectangle.X;
+            int y = myRectangle.Y;
+            int height = myRectangle.Height;
+            int width = myRectangle.Width;
+
+
+            int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+            int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+            myRectangle = new Rectangle(x - dX, y - dY, height, width);
+
+            this.panelDrawing.Invalidate();
+            this.panelDrawing.Update();
+            this.Refresh();
+        }
+
+        private void buttonMoveUpRight_Click(object sender, EventArgs e)
+        {
+            int x = myRectangle.X;
+            int y = myRectangle.Y;
+            int height = myRectangle.Height;
+            int width = myRectangle.Width;
+
+
+            int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+            int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+            myRectangle = new Rectangle(x + dX, y - dY, height, width);
+
+            this.panelDrawing.Invalidate();
+            this.panelDrawing.Update();
+            this.Refresh();
+        }
+
+        private void buttonMoveDownLeft_Click(object sender, EventArgs e)
+        {
+            int x = myRectangle.X;
+            int y = myRectangle.Y;
+            int height = myRectangle.Height;
+            int width = myRectangle.Width;
+
+
+            int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+            int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+            myRectangle = new Rectangle(x - dX, y + dY, height, width);
+
+            this.panelDrawing.Invalidate();
+            this.panelDrawing.Update();
+            this.Refresh();
+        }
+
+        private void buttonMoveDownRight_Click(object sender, EventArgs e)
+        {
+            int x = myRectangle.X;
+            int y = myRectangle.Y;
+            int height = myRectangle.Height;
+            int width = myRectangle.Width;
+
+
+            int dY = Convert.ToInt32(this.numericUpDowndY.Value);
+            int dX = Convert.ToInt32(this.numericUpDowndX.Value);
+            myRectangle = new Rectangle(x + dX, y + dY, height, width);
+
+            this.panelDrawing.Invalidate();
+            this.panelDrawing.Update();
+            this.Refresh();
+        }
     }
 }

@@ -312,6 +312,7 @@
             this.buttonMoveDownRight.Size = new System.Drawing.Size(75, 70);
             this.buttonMoveDownRight.TabIndex = 38;
             this.buttonMoveDownRight.UseVisualStyleBackColor = true;
+            this.buttonMoveDownRight.Click += new System.EventHandler(this.buttonMoveDownRight_Click);
             // 
             // buttonMoveDownLeft
             // 
@@ -323,6 +324,7 @@
             this.buttonMoveDownLeft.Size = new System.Drawing.Size(75, 70);
             this.buttonMoveDownLeft.TabIndex = 37;
             this.buttonMoveDownLeft.UseVisualStyleBackColor = true;
+            this.buttonMoveDownLeft.Click += new System.EventHandler(this.buttonMoveDownLeft_Click);
             // 
             // buttonMoveUpRight
             // 
@@ -336,6 +338,7 @@
             this.buttonMoveUpRight.TabIndex = 36;
             this.buttonMoveUpRight.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonMoveUpRight.UseVisualStyleBackColor = true;
+            this.buttonMoveUpRight.Click += new System.EventHandler(this.buttonMoveUpRight_Click);
             // 
             // buttonMoveUpLeft
             // 
@@ -347,6 +350,7 @@
             this.buttonMoveUpLeft.Size = new System.Drawing.Size(75, 70);
             this.buttonMoveUpLeft.TabIndex = 35;
             this.buttonMoveUpLeft.UseVisualStyleBackColor = true;
+            this.buttonMoveUpLeft.Click += new System.EventHandler(this.buttonMoveUpLeft_Click);
             // 
             // buttonMoveDown
             // 
